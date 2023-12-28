@@ -5,7 +5,9 @@
 >
 > document.cookie
 >
-> documen.getElementById('1');
+> document.getElementById('1');
+>
+> document.write('something');
 > 
 
 ### Event Listeners 
