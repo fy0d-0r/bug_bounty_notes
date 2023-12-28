@@ -11,3 +11,4 @@
 > Mutation based XSS
 > 
 
+What is Same Origin Policy (SOP) ?
