@@ -7,6 +7,7 @@
 >
 > document.getElementById('1');
 > document.getElementByTagName('div');
+> document.getElementByClassName('list-items');
 > document.querySelectorAll('div');
 > 
 > document.write('something');
