@@ -16,7 +16,7 @@
 > 
 
 ### Event Listeners 
->
+>element.addEventListener("click", function);
 > 
 
 ### Window Objects
