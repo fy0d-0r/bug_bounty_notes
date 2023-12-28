@@ -4,8 +4,10 @@
 > 
 > Stored XSS
 > 
-> DOM XSS
+> DOM based XSS
 > 
 > Blind XSS
+> 
+> Mutation based XSS
 > 
 
