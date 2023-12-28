@@ -8,6 +8,7 @@
 > document.getElementById('1');
 > document.getElementByTagName('div');
 > document.getElementByClassName('list-items');
+> document.querySelector(#main-heading);
 > document.querySelectorAll('div');
 > 
 > document.write('something');
