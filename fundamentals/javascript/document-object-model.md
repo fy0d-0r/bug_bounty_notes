@@ -17,7 +17,9 @@
 
 ### Event Listeners 
 >element.addEventListener("click", function);
-> 
+>
+>element.addEventListener("mouseover", function);
+>
 
 ### Window Objects
 >
