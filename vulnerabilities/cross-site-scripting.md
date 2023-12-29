@@ -28,6 +28,8 @@ In DOM XSS, the page itself (the HTTP response that is) does not change.
 
 <img src="/path/to/user_input" onload="alert(1)">
 
+[payload] -injected-> [ js code ] -executes-> [ creates object including payload] -renders-
+
 # Sink
 
 
