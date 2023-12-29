@@ -30,6 +30,7 @@
 >
 
 ### Window Objects
->
+
+> window.alert('1');
 >
 #
