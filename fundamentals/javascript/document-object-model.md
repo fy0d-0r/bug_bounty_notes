@@ -32,5 +32,5 @@
 ### Window Objects
 
 > window.alert('1');
->
+> alert(prompt());
 #
