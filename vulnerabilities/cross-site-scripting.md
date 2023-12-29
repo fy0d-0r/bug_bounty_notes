@@ -22,7 +22,9 @@ The policy checks:
 > port
 
 
+## DOM Based XSS
 
+In DOM XSS, the page itself (the HTTP response that is) does not change.
 
 
 
