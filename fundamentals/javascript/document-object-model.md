@@ -31,8 +31,12 @@
 
 ### Window Objects
 
-> window.alert('1');
-> 
-> alert(prompt());
->
-> window.location = "http://127.0.0.1"
+```
+window.alert('1');
+ 
+alert(prompt());
+
+window.location = "http://127.0.0.1"
+
+window.location.search
+```
