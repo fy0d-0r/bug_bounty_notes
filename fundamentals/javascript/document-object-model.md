@@ -41,3 +41,14 @@ window.location = "http://127.0.0.1"
 
 window.location.search
 ```
+
+URLSearchParams
+```
+http://www.somehost.com?name=video
+
+let querystring = window.location.search;
+let urlParam = new URLSearchParams(querystring);
+console.log(urlParam);
+let value = urlParam.get('name');
+console.log(value);
+```
