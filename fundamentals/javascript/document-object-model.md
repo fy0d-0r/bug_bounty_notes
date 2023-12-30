@@ -42,7 +42,7 @@ window.location = "http://127.0.0.1"
 window.location.search
 ```
 
-URLSearchParams
+## URLSearchParams
 ```
 http://www.somehost.com?name=video#default=1
 ```
@@ -56,9 +56,9 @@ console.log(value);
 ```
 
 ```
-(new URLSearchParams(window.location.search)).get('name');
+(new URLSearchParams(window.location.search)).get('name'); // video
 ```
 
 ```
-location.hash //#default=1
+location.hash // #default=1
 ```
