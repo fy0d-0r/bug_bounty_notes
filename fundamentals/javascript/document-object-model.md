@@ -44,8 +44,10 @@ window.location.search
 
 URLSearchParams
 ```
-http://www.somehost.com?name=video
+http://www.somehost.com?name=video#default=1
+```
 
+```
 let querystring = window.location.search; // ?name=video
 let urlParam = new URLSearchParams(querystring);
 console.log(urlParam);
@@ -55,4 +57,8 @@ console.log(value);
 
 ```
 (new URLSearchParams(window.location.search)).get('name');
+```
+
+```
+location.hash //#default=1
 ```
