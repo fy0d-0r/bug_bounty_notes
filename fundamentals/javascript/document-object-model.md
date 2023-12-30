@@ -46,9 +46,13 @@ URLSearchParams
 ```
 http://www.somehost.com?name=video
 
-let querystring = window.location.search;
+let querystring = window.location.search; // ?name=video
 let urlParam = new URLSearchParams(querystring);
 console.log(urlParam);
 let value = urlParam.get('name');
 console.log(value);
+```
+
+```
+(new URLSearchParams(window.location.search)).get('name');
 ```
