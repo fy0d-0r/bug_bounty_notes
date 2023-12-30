@@ -44,7 +44,7 @@ window.location.search
 
 ## URLSearchParams
 ```
-http://127.0.0.1/?name=video#default=1
+http://127.0.0.1/?name=video#default=1234
 ```
 
 ```
@@ -62,7 +62,7 @@ console.log(value);
 ```
 document.location.hash // #default=1
 <or>
-location.hash // #default=1
+location.hash // #default=1234
 ```
 
 ```
@@ -70,5 +70,9 @@ document.location.href // http://www.somehost.com?name=video#default=1
 ```
 
 ```
-document.location.href.indexOf("default="); // 29
+document.location.href.indexOf("default="); // 29 return index location of 'd' in 'default='
+```
+
+```
+var lang = document.location.href.substring(document.location.href.indexOf("default=")+8); // 1234 // +8 is to exclude 'default='
 ```
