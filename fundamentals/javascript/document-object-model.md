@@ -60,5 +60,11 @@ console.log(value);
 ```
 
 ```
+document.location.hash // #default=1
+<or>
 location.hash // #default=1
+```
+
+```
+document.location.href // http://www.somehost.com?name=video#default=1
 ```
