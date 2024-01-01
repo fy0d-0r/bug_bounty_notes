@@ -7,3 +7,8 @@ It is also known as one-click attack or session riding
 > CSRF attacks exploit the trust a Web application has in an authenticated user
 >
 > XSS attacks exploit the trust a user has in a particular Web application
+
+
+## CSRF Token
+
+The csrf token should be transmitted to the client within a hidden field in an HTML form, submitted using HTTP POST requests
