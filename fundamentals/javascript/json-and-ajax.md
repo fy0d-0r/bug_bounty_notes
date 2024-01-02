@@ -1,8 +1,7 @@
 # JSON (JavaScript Object Notation)
+
 # AJAX (Asynchronous JavaScript And XML)
-
-
-## XMLHttpRequest
+## XMLHttpRequest or AJAX Request
 
 ```
 var ourRequest = new XMLHttpRequest();
