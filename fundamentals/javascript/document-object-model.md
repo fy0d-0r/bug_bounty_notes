@@ -64,6 +64,8 @@ window.location = "http://127.0.0.1"
 
 window.location.search
 
+window.location.hash
+
 window.open("http://127.0.0.1");
 ```
 
