@@ -14,4 +14,6 @@ ourRequest.onerror = function() {
   console.log("Connection error");
 };
 ourRequest.send();
+
+console.log(ourRequest.status);
 ```
