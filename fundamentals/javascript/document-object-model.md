@@ -36,6 +36,14 @@ document.body
 
 document.all
 
+document.all[10] //using index number
+
+document.forms
+
+document.links
+
+document.images
+
 ```
 
 ### Event Listeners 
