@@ -10,5 +10,8 @@ ourRequest.onload = function() {
   var ourData = JSON.parse(ourRequest.responseText);
   console.log(ourData[0]);
 };
+ourRequest.onerror = function() {
+  console.log("Connection error");
+};
 ourRequest.send();
 ```
