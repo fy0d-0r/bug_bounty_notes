@@ -17,6 +17,7 @@ document.querySelector(#main-heading);
 
 document.querySelectorAll('div');
 
+element.insertAdjacentHTML('beforeend', data_variable);
 
 document.write('something');
 
