@@ -1,3 +1,7 @@
+# JSON (JavaScript Object Notation)
+# AJAX (Asynchronous JavaScript And XML)
+
+
 ## XMLHttpRequest
 
 ```
