@@ -12,3 +12,22 @@ It is also known as one-click attack or session riding
 ## CSRF Token
 
 The csrf token should be transmitted to the client within a hidden field in an HTML form, submitted using HTTP POST requests
+
+## Examples
+
+A example post request for deleting an account.
+```
+POST /delete_my_account HTTP/1.1
+Host: vulnerable.com
+Content-Type: application/x-www-form-urlencoded
+Cookie: SessionId=d34dc0d3
+
+delete=1
+```
+
+
+
+
+
+
+
