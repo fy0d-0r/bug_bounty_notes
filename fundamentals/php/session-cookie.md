@@ -3,6 +3,7 @@
 <?php
 setcookie("name", "value");
 //Set-Cookie: name=value
+// $_COOKIE['name'] => value
 ?>
 
 <?php
