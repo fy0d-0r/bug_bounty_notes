@@ -33,3 +33,4 @@ $_SESSION['name'] = "value";
 ```
 
 Diff: a session ends as soon as you close down your browser while a cookie has a time limit.
+Diff: PHPSESSID only includes session id while cookie includes some data inside it.
