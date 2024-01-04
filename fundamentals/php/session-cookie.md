@@ -1,7 +1,7 @@
 # Setting Cookie
 ```
 <?php
-setcookie("name", "value");
+setcookie("name", "value"); //Set-Cookie: name=value
 ?>
 ```
 
@@ -11,7 +11,7 @@ setcookie("name", "value");
 
 ```
 <?php
-session_start();
+session_start(); //Set-Cookie: PHPSESSID=qu99kc5vp9vnro63fvidopci98; path=/
 $_SESSION['name'] = "value";
 ?>
 ```
