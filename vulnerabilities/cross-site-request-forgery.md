@@ -29,6 +29,7 @@ delete=1
 
 Same Origin Policy (Same Domain, Same Schema, Same TCP Port)
 
+![url](https://github.com/fy0d-0r/notes/blob/main/web/fundamentals/images/url.png)
 
 
 
