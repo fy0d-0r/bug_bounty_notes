@@ -25,6 +25,9 @@ Cookie: SessionId=d34dc0d3
 delete=1
 ```
 
+### Cross Domain Access Controls
+
+Same Origin Policy (Same Domain, Same Schema, Same TCP Port)
 
 
 
