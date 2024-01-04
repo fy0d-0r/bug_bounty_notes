@@ -3,7 +3,7 @@
 <?php
 setcookie("name", "value");
 //Set-Cookie: name=value
-// $_COOKIE['name'] => value
+// $_COOKIE['name'] => value //This globle variable assign automatically and exclusively on setcookie() and not on session_start()
 ?>
 
 <?php
