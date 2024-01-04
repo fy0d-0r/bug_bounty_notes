@@ -12,11 +12,6 @@ setcookie("name", "value");
 ```
 <?php
 session_start();
-?>
-```
-
-```
-<?php
 $_SESSION['name'] = "value";
 ?>
 ```
