@@ -49,8 +49,30 @@ Same Origin Policy (Same Domain, Same Schema, Same TCP Port)
 ![url](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/sop.png)
 
 
+CORS (Cross origin Resource Sharing) is basically a bypass for same origin policy in a good way.
+This is only allowed if the server explicitly lets you.
 
+## JSON CSRF with appropriate Content-Type header via AJAX requests
 
+The browser does not just allow you to set any headers you want unless
+the server explicitly lets you do it using CORS.
 
+You can only set your Content-Type header if the server sends back 
+your domain and the header that you want to set which has Content-Type
+in the response header.
+```
+Access-Control-Allow-Origin: your website
+Access-Control-Allow-Headers: Content-Type
+```
 
+### Adobe Flash
+You can forge the Content-Type header using flash files but the thing is
+the cookie won't be sent along with it unless we have that cross domain XML
+and other things.
+A simple redirect(like 307) can solve this.
+We add a Content-Type header in the flash file and 
+all the json post data that we want to send.
+We also specify the request endpoint which is NOT the vulnerable site
+but instead to our 307 redirect page which in turn redirects to vulnerable website
+In this way, we can make the cookie sent along with our forged request.
 
