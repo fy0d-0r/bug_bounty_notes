@@ -1,6 +1,8 @@
 # JSON (JavaScript Object Notation)
 
 # AJAX (Asynchronous JavaScript And XML)
+AJAX loads in data without refreshing the browser.
+
 ## XMLHttpRequest or AJAX Request
 
 ```
