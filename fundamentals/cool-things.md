@@ -36,6 +36,8 @@ Listen 80 #CHANGE HERE
 
 ```
 $ curl 127.0.0.1:8888
+$ curl -I 127.0.0.1:8888
+$ curl -o response.html 127.0.0.1:8888
 $ curl -X POST --data "log=admin&pwd=password" https://wordpress.com/wp-login.php
 $ curl -X POST --data "{'option': 'value', 'something': 'anothervalue'}" -H "Content-Type: application/json" -H "User-Agent: Mozilla firefox" -H "Cookie: mycookie=chocolate" https://wordpress.com/wp-login.php
 $ curl -X POST --data "@myfile.json" https://example.com #sent file from cwd
