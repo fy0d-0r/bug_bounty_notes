@@ -6,6 +6,7 @@ console.log("Hello World!);
 
 document.cookie
 
+docuemtn.getElementsByName('email');
 
 document.getElementById('1');
 
