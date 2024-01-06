@@ -35,11 +35,12 @@ Listen 80 #CHANGE HERE
 ## Curl
 
 ```
-$ curl 127.0.0.1:8888 #Basic Request
-$ curl -I 127.0.0.1:8888 #Headers
-$ curl -o response.html 127.0.0.1:8888 #save to output file
+$ curl 127.0.0.1:8080 #Basic Request
+$ curl http://127.0.0.1:8080 #Also Basic Request
+$ curl -I 127.0.0.1:8080 #Headers
+$ curl -o response.html 127.0.0.1:8080 #save to output file
 $ curl ipinfo.io/<IPADDRESS> #IP Information
-$ curl -v 127.0.0.1:8888 #Also show request data
+$ curl -v 127.0.0.1:8080 #Also show request data
 ```
 
 ```
@@ -56,6 +57,11 @@ export http_proxy=http://your.proxy.server:port
 export https_proxy=https://your.proxy.server:port
 ```
 
+## Wget
+
+```
+$ wget 127.0.0.1:8080
+```
 
 
 
