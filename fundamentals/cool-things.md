@@ -39,6 +39,7 @@ $ curl 127.0.0.1:8888 #Basic Request
 $ curl -I 127.0.0.1:8888 #Headers
 $ curl -o response.html 127.0.0.1:8888 #save to output file
 $ curl ipinfo.io/<IPADDRESS> #IP Information
+$ curl -v 127.0.0.1:8888 #Also show request data
 ```
 
 ```
