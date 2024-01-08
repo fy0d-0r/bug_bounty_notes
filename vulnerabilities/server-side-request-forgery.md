@@ -5,7 +5,7 @@ In a typical SSRF attack, the attacker might cause the server to make a connecti
 Server-Side Request Forgery (SSRF) is a type of web application vulnerability that allows an attacker to make unauthorized requests from a vulnerable server to other web applications or internal systems that are not intended to be accessible from the internet.
 
 
-
+![SSRF](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/How-Server-SSRF-works.png)
 
 
 
