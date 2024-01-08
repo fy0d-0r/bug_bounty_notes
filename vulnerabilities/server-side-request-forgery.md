@@ -7,10 +7,21 @@ Server-Side Request Forgery (SSRF) is a type of web application vulnerability th
 
 ![SSRF](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/How-Server-SSRF-works.png)
 
+Original Request
+```
+POST /booking
 
+availabilityApi=http://api.booking-example.com/booking?start=0122023&end=20122023
+```
 
+Malicious Request
+```
+POST /booking
 
+availabilityApi=http://127.0.0.1/admin
+```
 
+### References
 ```
 https://medium.com/@adithyakrishnav001/server-side-request-forgery-ssrf-bf23802cfb12
 ```
