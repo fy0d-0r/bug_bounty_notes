@@ -20,6 +20,8 @@ POST /booking
 
 availabilityApi=http://127.0.0.1/admin
 ```
+Here, instead of making a request with legitimate url, the attacker calls the admin page on the loopback address.Because the request is coming from the server itself which is trusted, the page is served without complaint.
+
 
 ### References
 ```
