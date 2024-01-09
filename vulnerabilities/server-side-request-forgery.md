@@ -36,9 +36,7 @@ done
 
 Using &x to cancell out the what is appended
 
-```
-
-```
+![url](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/Screenshot_2024-01-09_07-40-03.png)
 
 ### References
 ```
