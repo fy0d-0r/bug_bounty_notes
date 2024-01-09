@@ -34,6 +34,12 @@ for x in {1..65535};
 done
 ```
 
+Using &x to cancell out the what is appended
+
+```
+
+```
+
 ### References
 ```
 https://medium.com/@adithyakrishnav001/server-side-request-forgery-ssrf-bf23802cfb12
