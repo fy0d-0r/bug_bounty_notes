@@ -44,7 +44,7 @@ Allowing arbitrary cross-origin requests is known to be extremely dangerous. The
 DNS rebinding is a method of manipulating resolution of domain names that is commonly used as a form of computer attack. In this attack, a malicious web page causes visitors to run a client-side script that attacks machines elsewhere on the network. In theory, the same-origin policy prevents this from happening: client-side scripts are only allowed to access content on the same host that served the script. Comparing domain names is an essential part of enforcing this policy, so DNS rebinding circumvents this protection by abusing the Domain Name System (DNS).
 
 ### Implementation of DNS Rebinding
-
+ref: `https://unit42.paloaltonetworks.com/dns-rebinding/`
 
 ### References
 ```
