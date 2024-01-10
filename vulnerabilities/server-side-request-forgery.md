@@ -39,6 +39,8 @@ Using &x to cancell out the what is appended
 ![url](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/Screenshot_2024-01-09_07-40-03.png)
 
 ## DNS Rebinding
+Allowing arbitrary cross-origin requests is known to be extremely dangerous. Therefore most modern browsers block these requests(by SOP). However, DNS rebinding provides a way to bypass this restriction.
+
 DNS rebinding is a method of manipulating resolution of domain names that is commonly used as a form of computer attack. In this attack, a malicious web page causes visitors to run a client-side script that attacks machines elsewhere on the network. In theory, the same-origin policy prevents this from happening: client-side scripts are only allowed to access content on the same host that served the script. Comparing domain names is an essential part of enforcing this policy, so DNS rebinding circumvents this protection by abusing the Domain Name System (DNS).
 
 ### Implementation of DNS Rebinding
