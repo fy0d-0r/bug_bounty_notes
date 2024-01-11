@@ -46,6 +46,8 @@ DNS rebinding is a method of manipulating resolution of domain names that is com
 ### Implementation of DNS Rebinding
 ref: `https://unit42.paloaltonetworks.com/dns-rebinding/`
 
+![dns-rebinding](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/dns-rebinding-1.png)
+
 ### References
 ```
 https://medium.com/@adithyakrishnav001/server-side-request-forgery-ssrf-bf23802cfb12
