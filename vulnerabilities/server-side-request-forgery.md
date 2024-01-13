@@ -49,6 +49,10 @@ ref: `https://www.youtube.com/watch?v=y9-0lICNjOQ&list=PLB0iNDIOY78Yno8UgY1j_2kK
 
 ![dns-rebinding](https://github.com/fy0d-0r/bug_bounty_notes/blob/main/images/dns-rebinding-2.png)
 
+## Blind SSRF with Shellshock Exploitation
+### Shellshock
+Shellshock, also known as Bashdoor, is a family of security bugs in the Unix Bash shell, the first of which was disclosed on 24 September 2014. Shellshock could enable an attacker to cause Bash to execute arbitrary commands and gain unauthorized access to many Internet-facing services, such as web servers, that use Bash to process requests. 
+
 ### References
 ```
 https://medium.com/@adithyakrishnav001/server-side-request-forgery-ssrf-bf23802cfb12
