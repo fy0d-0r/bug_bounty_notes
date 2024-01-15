@@ -37,7 +37,7 @@ DNS Database (zone file) betweeen DNS (Name) Servers.
 When the name server is vulnerable in Zone Transfer,
 we can enumerate sub domains easily.
 
-Testing Zone Transfer
+#### Testing Zone Transfer
 $ dig axfr @<recursive_ip> <target-domain>
 ```
 $ dig axfr @10.10.23.22 targetdomain.org
