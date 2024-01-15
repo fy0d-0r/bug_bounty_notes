@@ -20,8 +20,10 @@ Fuzzing directory using Ffuf by filtering out specified HTTP status code from re
 ```
 $ shodan init <API key>
 $ shodan info
+$ shodan search "wordpress 1.4.7"
 $ shodan count wordpress
 $ shodan download wordpressfile "wordpress 1.4.7"
+$ shodan scan submit 12.34.56.78
 ```
 
 ### Host
