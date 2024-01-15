@@ -31,5 +31,7 @@ $ shodan scan submit 12.34.56.78
 
 ## DNS Enumeration
 ### host
-### dig
+### dig and zone transfer
+Zone transfer is the process of replicating
+DNS Database (zone file) betweeen DNS (Name) Servers.
 ### nslookup
