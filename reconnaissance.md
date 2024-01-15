@@ -23,3 +23,9 @@ $ shodan info
 $ shodan count wordpress
 $ shodan download wordpressfile "wordpress 1.4.7"
 ```
+
+### Host
+### Whois
+## DNS
+### dig
+### nslookup
