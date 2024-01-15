@@ -34,4 +34,6 @@ $ shodan scan submit 12.34.56.78
 ### dig and zone transfer
 Zone transfer is the process of replicating
 DNS Database (zone file) betweeen DNS (Name) Servers.
+When the name server is vulnerable in Zone Transfer,
+we can enumerate sub domains easily.
 ### nslookup
