@@ -17,3 +17,9 @@ Fuzzing directory using Ffuf by filtering out specified HTTP status code from re
 
 ## Shodan
 
+```
+$ shodan init <API key>
+$ shodan info
+$ shodan count wordpress
+$ shodan download wordpressfile "wordpress 1.4.7"
+```
