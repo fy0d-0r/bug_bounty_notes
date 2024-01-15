@@ -14,5 +14,6 @@ $ ffuf -w /usr/share/wordlists/dirb/common.txt -u http://somewebsite.com/FUZZ -f
 Fuzzing directory using Ffuf by filtering out specified HTTP status code from response with 2 seconds delay.
 
 ### Dirb
-```
-```
+
+## Shodan
+
