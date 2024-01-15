@@ -27,7 +27,6 @@ $ shodan scan submit 12.34.56.78
 ```
 
 
-### Whois
 
 ## DNS Enumeration
 ### host
@@ -36,11 +35,46 @@ Zone transfer is the process of replicating
 DNS Database (zone file) betweeen DNS (Name) Servers.
 When the name server is vulnerable in Zone Transfer,
 we can enumerate sub domains easily.
-
 #### Testing Zone Transfer
 $ dig axfr @<recursive_ip> <target-domain>
 ```
 $ dig axfr @10.10.23.22 targetdomain.org
 ```
 
+### Whois
+```
+$ whois google.com
+```
+
 ### nslookup
+```
+$ nslookup www.targetdomain.org
+```
+### The Harvester
+
+```
+$ theHarvester -d targetdomain.org -b google 
+```
+
+## crt.sh
+- used for sub domain enumeration
+```
+https://crt.sh
+```
+subdomains of interest
+```
+dev
+api
+admin
+portal
+```
+
+
+
+
+
+
+
+
+
+
