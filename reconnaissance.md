@@ -26,10 +26,10 @@ $ shodan download wordpressfile "wordpress 1.4.7"
 $ shodan scan submit 12.34.56.78
 ```
 
-### Host
 
 ### Whois
 
 ## DNS Enumeration
+### host
 ### dig
 ### nslookup
