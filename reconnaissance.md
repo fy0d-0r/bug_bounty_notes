@@ -27,7 +27,9 @@ $ shodan scan submit 12.34.56.78
 ```
 
 ### Host
+
 ### Whois
-## DNS
+
+## DNS Enumeration
 ### dig
 ### nslookup
