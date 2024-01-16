@@ -79,6 +79,7 @@ $ sublist3r -d targetdomain.org
 ### Owasp Amass
 ```
 $ ./go/bin/amass enum -d targetdomain.org
+$ ./go/bin/amass enum -passive -d targetdomain.org
 ```
 
 
