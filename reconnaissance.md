@@ -56,7 +56,7 @@ $ nslookup www.targetdomain.org
 $ theHarvester -d targetdomain.org -b google 
 ```
 
-## crt.sh
+### crt.sh
 - used for sub domain enumeration
 ```
 https://crt.sh
@@ -69,9 +69,17 @@ admin
 portal
 ```
 
+## Directory fuzzing
 
+### Sublist3r
+```
+$ sublist3r -d targetdomain.org 
+```
 
-
+### Owasp Amass
+```
+$ ./go/bin/amass enum -d targetdomain.org
+```
 
 
 
