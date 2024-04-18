@@ -13,6 +13,8 @@ DMBS   - Database Management System
 
 ## MySQL Basics
 
+`mysqld` runs on tcp port `3306` on default.
+
 DATABASES
 ```
 mysql> show databases;
