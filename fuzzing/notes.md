@@ -24,4 +24,19 @@ fuff -w common.txt:FUZZ1 -w values.txt:FUZZ2 -u http://10.10.22.33/FUZZ1/?id=FUZ
 
 ## WFUZZ
 
-## Dirb
+```
+-c	#Show output in colour
+-d	#Specify POST data
+-z	#Specify payload
+--hc	#Hide specified response code
+--hl	#Hide specified amount of lines
+--hh	#Hide specified amount of characters
+```
+
+```
+wfuzz -c -z file,big.txt 10.10.11.12:80/FUZZ/note.txt
+```
+
+```
+wfuzz -c -z file,mywordlist.txt -d "username=FUZZ&password=FUZZ" -u http://10.10.11.12/login.php
+```
