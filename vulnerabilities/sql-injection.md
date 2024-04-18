@@ -46,7 +46,7 @@ Start up
 ```
 service mysql start
 mysqladmin version
-mysqladmin -u root password "p@$$w0rd"
+mysqladmin -u root password "p@$$w0rd" #settin mysql root user password
 mysql -u root -p
 ```
 
