@@ -1,5 +1,8 @@
 ## Gobuster
 
+
+
+
 ## FUFF
 ```
 fuff -w common.txt:FUZZ -u http://10.10.22.33/FUZZ/?id=1234 -mc 200 -fs 1487 
