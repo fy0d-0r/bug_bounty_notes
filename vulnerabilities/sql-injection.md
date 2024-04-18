@@ -15,11 +15,47 @@ DMBS   - Database Management System
 
 `mysqld` runs on tcp port `3306` on default.
 
+Datatypes
+```
+INT
+FLOAT
+CHAR
+VARCHAR
+DATE #YY-MM-DD
+DATETIME #YY-MM-DD HH:MM:SS
+BLOB(Binary Large Objects) #store large amount of data such as images
+TEXT
+```
+
+Parameters
+```
+PRIMARY KEY
+```
+Actions
+```
+CREATE #create tables or dbs
+DROP #delete tables or dbs
+DELETE #delete rows from tables
+INSERT #insert rows into tables
+SELECT #read through dbs
+UPDATE #update table rows
+GRANT OPTION #grant or remove other users' privileges
+```
+
+Start up
+```
+service mysql start
+mysqladmin version
+mysqladmin -u root password "p@$$w0rd"
+mysql -u root -p
+```
+
 DATABASES
 ```
 mysql> show databases;
 mysql> create database <DB_NAME>;
 mysql>  use <DB_NAME>;
+mysql> drop database <dbname>;
 ```
 
 TABLES
@@ -32,6 +68,7 @@ mysql> create table coffee_table (
 - roast varchar(255)
 - );
 mysql> describe coffee_table;
+mysql> show columns from coffee_table;
 ```
 
 INSERT
@@ -73,4 +110,13 @@ ADD COLUMN
 mysql> alter table avengers add beard boolean;
 ```
 
-
+## SQL injection Types
+```
+In-Band SQLi
+- Error-Based
+- Union-Based
+Blind SQLi
+- Boolean-Based
+- Time-Based
+Out-Of-Bound SQLi
+```
