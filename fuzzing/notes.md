@@ -1,5 +1,14 @@
 ## Gobuster
 
+### Directory Fuzzing with `dir`
+```
+gobuster dir -h 
+```
+
+```
+gobuster dir -w common.txt -u http://10.10.11.12/
+gobuster dir -w big.txt -x php,txt,html -u http://10.10.11.12/
+```
 
 
 
