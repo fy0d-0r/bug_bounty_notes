@@ -283,7 +283,7 @@ mysql> drop table students;
 mysql> drop database school_db;
 ```
 
-## Creating a Page that will update the database from post parameter and then extract data from the database
+## Creating a page that will insert data through GET parameter, select data by POST parameter
 
 ### Configuring the Database
 
