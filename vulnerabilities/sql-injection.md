@@ -286,25 +286,84 @@ mysql> drop database school_db;
 ## Creating a Page that will update the database from post parameter and then extract data from the database
 
 ### Configuring the Database
+
+
+### Creating Web Page
+`index.html`
 ```
-$ sudo mysqladmin -u root password "rootpassword";
-$ sudo mysql -u root -p
-
-mysql> create database school_db;
-mysql> show databases;
-mysql> use school_db;
-
-MariaDB [school_db]> create table students(
-    -> roll INT(30) NOT NULL PRIMARY KEY,
-    -> name VARCHAR(30) NOT NULL,
-    -> major VARCHAR(30) NOT NULL,
-    -> year VARCHAR(30) NOT NULL,
-    -> created_at DATETIME NOT NULL DEFAULT CURRENT_DATE
-    -> );
-MariaDB [school_db]> show tables;
-MariaDB [school_db]> describe students;
-MariaDB [school_db]> show columns from students;
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>web page</title>
+	</head>
+	<body>
+		<p>Hello World</p>
+		<br>
+		<form action="./action.php" method="post">
+			<label for="username">Username:</label><br>
+			<input type="text" name="username"><br>
+			<label for="password">Password:</label><br>
+			<input type="password" name="password"><br>
+			<input type="submit" value="login">
+		</form>
+	</body>
+</html>
 ```
 
+`action.php`
+```
+<?php
+        //Connecting Database
+        $servername = "localhost";
+        $username = "root";
+        $password = "rootpassword";
+        $database = "school_db";
+        $conn = new mysqli($servername, $username, $password, $database);
+        if($conn->connect_error){
+                die("Connection failed".$conn->connect_error);
+        }else{
+                echo "<br>Connection Successful<br>";
+        }
 
+	//GET GET data for register
+	$roll = $_GET['roll'];
+	$name = $_GET['name'];
+	$major = $_GET['major'];
+	$r_username = $_GET['username'];
+	$r_password = $_GET['password'];
+	$register = "INSERT INTO student_lms (roll,name,major,username,password) VALUES ('$roll','$name','$major','$r_username','$r_password');";
+	echo "$register<br>";
+	
+	//Getting POST data for login
+        $username = $_POST['username'];
+	$password = $_POST['password'];
+	$login = "SELECT * FROM student_lms WHERE username='$username' and password='$password';";
+	echo "$login<br>";
+
+	//Query GET or POST Request
+	if(isset($_GET['roll'])){
+		echo "GET ISSET<br>";
+		$result = $conn->query($register);
+	}
+
+	if(isset($_POST['username'])){
+		echo "POST ISSET<br>";
+		$result = $conn->query($login);
+		if(!$result){
+			echo "Error".$conn->error;
+		}else{
+			echo "Login Successful<br>";
+			$row = $result->fetch_assoc();
+			echo $row["name"];
+		}
+	}
+
+	//Displaying the result
+	echo $result;
+
+	//Closing the connection
+	$conn->close();
+
+?>
+```
 
