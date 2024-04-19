@@ -233,7 +233,7 @@ MariaDB [school_db]> describe students;
 MariaDB [school_db]> show columns from students;
 ```
 
-### Creating Web Page
+### Creating the Web Page
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -321,7 +321,7 @@ MariaDB [school_db]> show columns from student_lms;
 7 rows in set (0.003 sec)
 ```
 
-### Creating Web Page
+### Creating the Web Page
 `index.html`
 ```
 <!DOCTYPE html>
