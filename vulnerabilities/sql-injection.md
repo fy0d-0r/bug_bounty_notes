@@ -69,7 +69,7 @@ mysql> create table coffee_table (
   );
 mysql> describe coffee_table;
 mysql> show columns from coffee_table;
-mysql> delete table coffee_table;
+mysql> drop table coffee_table;
 ```
 ```
 mysql> show tables;
@@ -210,11 +210,69 @@ ErrorBased
 select * from team_tbl where id = 1 order by 4;
 ```
 
+## Creating a Page that will update the database from get parameter
 
+### Configuring the Database
+```
+$ sudo mysqladmin -u root password "rootpassword";
+$ sudo mysql -u root -p
+mysql> create database school_db;
+mysql> show databases;
+mysql> use school_db;
+mysql>
 
+mysql> show tables;
+```
 
+### Creating Web Page
+```
+<!DOCTYPE html>
+<html lang="en">
 
+	<head>
+		<title>web page</title>
+	</head>
+	<body>
+		WELCOME TO THE SCHOOL<br>
+	</body>
+<?php
 
+	$servername = "localhost";
+        $username = "root";
+        $password = "rootpassword";
+        $database = "school_db";
+        $conn = new mysqli($servername, $username, $password, $database);
+
+        if($conn->connect_error){
+                die("Connection failed".$conn->connect_error);
+	}else{
+		echo "Connection Successful<br>";
+	}
+
+        $roll = $_GET['roll'];
+        $name = $_GET['name'];
+        $major = $_GET['major'];
+        $year = $_GET['year'];
+
+        $sql = "INSERT INTO students (roll,name,major,year) VALUES ('$roll', '$name', '$major', '$year');";
+	echo $sql;	
+	$result=$conn->query($sql);
+	if($result === TRUE){
+                echo "<br>Database is updated successfully<br>";
+        }else{
+                echo "Error: ". $sql . "<br>" . $conn->error;
+        }
+        $conn->close();
+?>
+
+</html>
+```
+
+### Removing the Table and Database
+```
+mysql> drop table students;
+mysql> drop database school_db;
+```
 
 
 
