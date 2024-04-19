@@ -287,6 +287,39 @@ mysql> drop database school_db;
 
 ### Configuring the Database
 
+```
+MariaDB [(none)]> show databases;
+MariaDB [(none)]> create database school_db;
+MariaDB [(none)]> use school_db;
+```
+
+```
+MariaDB [school_db]> create table student_lms(
+    -> id INT(30) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -> roll INT(30) NOT NULL,
+    -> name VARCHAR(30) NOT NULL,
+    -> major VARCHAR(30) NOT NULL,
+    -> username VARCHAR(30) NOT NULL,
+    -> password VARCHAR(30) NOT NULL,
+    -> created_at DATETIME NOT NULL DEFAULT CURRENT_DATE
+    -> );
+```
+
+```
+MariaDB [school_db]> show columns from student_lms;
++------------+-------------+------+-----+-----------+----------------+
+| Field      | Type        | Null | Key | Default   | Extra          |
++------------+-------------+------+-----+-----------+----------------+
+| id         | int(30)     | NO   | PRI | NULL      | auto_increment |
+| roll       | int(30)     | NO   |     | NULL      |                |
+| name       | varchar(30) | NO   |     | NULL      |                |
+| major      | varchar(30) | NO   |     | NULL      |                |
+| username   | varchar(30) | NO   |     | NULL      |                |
+| password   | varchar(30) | NO   |     | NULL      |                |
+| created_at | datetime    | NO   |     | curdate() |                |
++------------+-------------+------+-----+-----------+----------------+
+7 rows in set (0.003 sec)
+```
 
 ### Creating Web Page
 `index.html`
