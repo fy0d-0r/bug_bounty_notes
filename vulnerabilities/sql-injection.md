@@ -85,6 +85,8 @@ mysql> create table student(
 );
 PRIMARY KEY means that each value in the student_id column must be unique within the table, and it cannot contain NULL values
 
+mysql> show columns from <table name>;
+mysql> show columns from students;
 mysql> insert into <table_name> (field1,field2,...,fieldN) values (value1, value2,...,valueN);
 mysql> delete from <table_name> where <condition>
 mysql> delete from result_tbl where result_id = 5;
