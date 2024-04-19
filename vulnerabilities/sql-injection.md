@@ -216,12 +216,21 @@ select * from team_tbl where id = 1 order by 4;
 ```
 $ sudo mysqladmin -u root password "rootpassword";
 $ sudo mysql -u root -p
+
 mysql> create database school_db;
 mysql> show databases;
 mysql> use school_db;
-mysql>
 
-mysql> show tables;
+MariaDB [school_db]> create table students(
+    -> roll INT(30) NOT NULL PRIMARY KEY,
+    -> name VARCHAR(30) NOT NULL,
+    -> major VARCHAR(30) NOT NULL,
+    -> year VARCHAR(30) NOT NULL,
+    -> created_at DATETIME NOT NULL DEFAULT CURRENT_DATE
+    -> );
+MariaDB [school_db]> show tables;
+MariaDB [school_db]> describe students;
+MariaDB [school_db]> show columns from students;
 ```
 
 ### Creating Web Page
@@ -274,7 +283,28 @@ mysql> drop table students;
 mysql> drop database school_db;
 ```
 
+## Creating a Page that will update the database from post parameter and then extract data from the database
 
+### Configuring the Database
+```
+$ sudo mysqladmin -u root password "rootpassword";
+$ sudo mysql -u root -p
+
+mysql> create database school_db;
+mysql> show databases;
+mysql> use school_db;
+
+MariaDB [school_db]> create table students(
+    -> roll INT(30) NOT NULL PRIMARY KEY,
+    -> name VARCHAR(30) NOT NULL,
+    -> major VARCHAR(30) NOT NULL,
+    -> year VARCHAR(30) NOT NULL,
+    -> created_at DATETIME NOT NULL DEFAULT CURRENT_DATE
+    -> );
+MariaDB [school_db]> show tables;
+MariaDB [school_db]> describe students;
+MariaDB [school_db]> show columns from students;
+```
 
 
 
